@@ -149,7 +149,7 @@ fi
 info "Using '$WLAN' wireless interface."
 
 # Get the next guest VM/LXC ID
-CTID=$(pvesh get /cluster/nextid)
+CTID=$222
 info "Container ID is $CTID."
 
 # Download latest Debian LXC template
