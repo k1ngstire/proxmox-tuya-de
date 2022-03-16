@@ -15,3 +15,11 @@ Damit das Skript ordentlich läuft musst du funktionables WiFi haben, dafür gib
 ## Custom Firmware
 
 Um Custom Firmware hinzuzufügen (nicht von tuya-convert), verbinde dich mit dem Samba Share den der Container erstellt. (Login Daten werden beim Login an der Shell angezeigt) und füge die Datei zum Ordner: `tuya-convert/files/` hinzu. Deine Datei wird unter dem "custom firmware" Menü gelistet.
+
+
+## Forks und Edits
+
+Dieser Fork ist von whiskerz007 und durch mich angepasst, weitere Informationen findest du bei whiskerz007 und jayroo1976.
+
+https://github.com/whiskerz007/proxmox_tuya-convert_container
+https://github.com/jayroo1976/tuyaproxmox
