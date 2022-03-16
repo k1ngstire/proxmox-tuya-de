@@ -1,17 +1,17 @@
-# New Proxmox tuya-convert Container
+# Neuer Proxmox Tuya-Convert Container
 
-This script will create a new Proxmox LXC container with the latest Debian and setup tuya-convert. To create a new LXC container, run the following in a SSH session or the console from Proxmox interface
+Dieses Skript erstellt einen neuen Proxmox LXC Container mit der aktuellste Debian Version und richtet tuya-convert ein. Um das Skript zu starten führe den folgenden Befehl in einer SSH Session oder im Proxmox Terminal aus:
 
 ```
 bash -c "$(wget -qLO - https://github.com/nurChrisYT/proxmox-tuya/raw/master/create_container.sh)"
 ```
 
-During the setup process, you may be prompted to select your storage location or wireless interface (if you have more than one usable option). The wireless interface will be assigned to container. _(Note: When the container is running, no other container or VM will have access to the interface.)_ After the successful completion of the script, start the container identified by the script, then use the login credentials shown to start the tuya-convert script. If you need to stop tuya-convert, press `CTRL + C`, tuya-convert will be halted, and you will be brought back to the login prompt. If you login again it will start tuya-convert again.
+Während des Installationsprozesses wirst du eventuell aufgefordert deinen Speicherort oder das WiFi-Interface festzulegen (Wenn du mehr als eine Option hast). Das WiFi Interface wird dem Container zugewiesen. _(Hinweis: Wenn der Container läuft dann wird kein anderer Container oder VM zugriff auf das WiFi-Interface haben.)_ Nach der erfolgreichen Installation starte den Container, welchen das Skript erstellt hat. Benutze die angezeigten Login-Information. Um tuya-convert zu stoppen drücke `STRG + C`, tuya-convert wird angehalten und du wirst zum Login Screen zurückgebracht. Nach einem neuen Login wird tuya-convert wieder starten.
 
-## Prerequisite
+## Was benötigt wird
 
-In order for this script to work appropriately, you must first have the drivers installed and setup correctly for your WiFi adapter in Proxmox. The beginning the of the script will test for valid WLAN interfaces. An error will be produced if one can not be found.
+Damit das Skript ordentlich läuft musst du funktionables WiFi haben, dafür gibt es Linux-Wifi Sticks, schau auf meiner Seite www.netztüfteln.de, dort habe ich einen Beitrag dazu. Das Skript wird zu Beginn nach gültigen WiFi-Interfaces suchen und wird einen Error auswerfen wenn keines gefunden wird.
 
 ## Custom Firmware
 
-To add custom firmware (not supplied by tuya-convert), connect to the samba share created by the container (details are provided at the login prompt) and add the binary to the `tuya-convert/files/` folder. Your binary will listed under the custom firmware menu.
+Um Custom Firmware hinzuzufügen (nicht von tuya-convert), verbinde dich mit dem Samba Share den der Container erstellt. (Login Daten werden beim Login an der Shell angezeigt) und füge die Datei zum Ordner: `tuya-convert/files/` hinzu. Deine Datei wird unter dem "custom firmware" Menü gelistet.
