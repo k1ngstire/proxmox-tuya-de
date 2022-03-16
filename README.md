@@ -3,7 +3,7 @@
 Dieses Skript erstellt einen neuen Proxmox LXC Container mit der aktuellste Debian Version und richtet tuya-convert ein. Um das Skript zu starten führe den folgenden Befehl in einer SSH Session oder im Proxmox Terminal aus:
 
 ```
-bash -c "$(wget -qLO - https://github.com/nurChrisYT/proxmox-tuya/raw/master/create_container.sh)"
+bash -c "$(wget -qLO - https://github.com/nurChrisYT/proxmox-tuya-de/raw/master/create_container.sh)"
 ```
 
 Während des Installationsprozesses wirst du eventuell aufgefordert deinen Speicherort oder das WiFi-Interface festzulegen (Wenn du mehr als eine Option hast). Das WiFi Interface wird dem Container zugewiesen. _(Hinweis: Wenn der Container läuft dann wird kein anderer Container oder VM zugriff auf das WiFi-Interface haben.)_ Nach der erfolgreichen Installation starte den Container, welchen das Skript erstellt hat. Benutze die angezeigten Login-Information. Um tuya-convert zu stoppen drücke `STRG + C`, tuya-convert wird angehalten und du wirst zum Login Screen zurückgebracht. Nach einem neuen Login wird tuya-convert wieder starten.
