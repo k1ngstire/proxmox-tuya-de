@@ -54,7 +54,7 @@ apt-get update >/dev/null
 apt-get -qqy upgrade &>/dev/null
 
 # Install prerequisites
-msg "Installing prerequisites..."
+msg "Installing prerequisites... edited by nurChrisYT and used"
 echo "samba-common samba-common/dhcp boolean false" | debconf-set-selections
 apt-get -qqy install \
   git curl network-manager net-tools samba &>/dev/null
