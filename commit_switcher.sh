@@ -5,6 +5,7 @@ set -o errtrace #Trap ERR from shell functions, command substitutions, and comma
 set -o nounset  #Treat unset variables as an error
 set -o pipefail #Pipe will exit with last non-zero status if applicable
 
+#Start
 cd /root/tuya-convert
 TITLE="tuya-convert Commit Switcher"
 WORKING_COMMIT=$(git show -s --format="%h")
